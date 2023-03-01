@@ -2,6 +2,8 @@
 
 ## Declaration of type
 
+March 1st, 2023
+
 In Typescript, a variable should be declared in the following format:
 
 {declaration method} {value name} : {type name} = {variable value}
@@ -80,3 +82,7 @@ In Typescript, arrays can be annotated, and thereby allowing only one type of va
 let name: string [] = [];
 
 let names: Array<string> = [];
+
+## March 1st, 2023
+
+March 2nd, 2023
