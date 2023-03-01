@@ -8,4 +8,4 @@ In Typescript, a variable should be declared in the following format:
 
 Example:
 
-const catName : string = 'Micky'
+const catName : string = 'Micky';
