@@ -83,6 +83,6 @@ let name: string [] = [];
 
 let names: Array<string> = [];
 
-## March 1st, 2023
+---
 
 March 2nd, 2023
