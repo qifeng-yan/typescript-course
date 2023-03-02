@@ -86,3 +86,45 @@ let names: Array<string> = [];
 ---
 
 March 2nd, 2023
+
+Type union uses the OR operator **|** to allow multiple types. When a variable is annotated with multiple types, Typescript will notify the user when the user tries to apply a function which works only with one of the annotated types. To fix this, you can use Type Narrowing, performing a simple type check before working with the variable.
+
+You can annotate an array in which both strings and numbers are allowed as the following example:
+
+let age: (string | number)[] = [];
+
+### Literal Type
+
+You can annotate a variable to be from a range of certain values by using the literal type.
+
+For example, if you want to allow only valid options such as 'yes' and 'no', do the following:
+
+let answer: 'yes' | 'no' = 'yes';
+
+The answer is initialized as 'yes'. It can be reassigned as 'no' and 'yes'. Other values will cause Typescript complaint.
+
+### Tuple
+
+Tuple is a special type of array with a fixed length, and its elements are of fixed types in a specific order.
+
+However, strangely method that can alter the array such as push() and pop() can still be applied to tuple. This is also a limitation of Typescript.
+
+To declare a tuple, do
+
+type Car = [ string ];
+
+In this case, the type Car is a tuple that can contain one string element.
+
+### Enum
+
+Enum is a set of values that are usually used to refer to e.g. status, which will be reused again and again and not supposed to change.
+
+### Interface
+
+Interface is very similar to type alias, but only can be used to annotate object.
+
+You can use Interface to describe the shape of an object, which can contain multiple types of values and even functions(methods).
+
+Interface can be "reopen". By annotating an interface again, you add to the interface instead of overwriting the interface.
+
+You can also extend interface. By declaring a new interface and use the keyword extend, you annotate the new interface with the same shape as one or more previously declared interfaces in addition to the new properties.

@@ -1,10 +1,6 @@
 const movie: string = 'Avatar';
 let catName = 'Micky';
 
-function greet(name: string) {
-  console.log(`Hello ${name}`);
-}
-
 //Exercise　１
 function twoFer(name: string = 'you'): string {
   return `one for ${name}, one for me`;
@@ -78,4 +74,45 @@ function getTotal(products: Array<Product>): number {
     sum += product.price;
   }
   return sum;
+}
+
+function calculateTax(price: number | string, tax: number) {
+  return +price * tax;
+}
+
+// exercise
+let highScore: number | boolean = true;
+let stuff: number[] | string[] = [];
+
+type SkillLevel = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
+
+type SkiSchoolStudent = {
+  name: string;
+  age: number;
+  sport: 'ski' | 'snowboard';
+  level: SkillLevel;
+};
+
+type RGBColor = {
+  r: number;
+  g: number;
+  b: number;
+};
+
+type HSLColor = {
+  h: number;
+  s: number;
+  l: number;
+};
+
+let colors: (RGBColor | HSLColor)[] = [];
+
+function greet(name: string | string[]): void {
+  if (typeof name === 'string') {
+    console.log(`Hello, ${name}`);
+  } else {
+    for (let n in name) {
+      console.log(`Hello, ${n}`);
+    }
+  }
 }
